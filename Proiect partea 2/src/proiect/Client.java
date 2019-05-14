@@ -14,6 +14,11 @@ public class Client  {
         public double pret_stand_up=0;
         public double pret_teatru=0;
 
+        public Eveniment get_ID(int id)
+        {
+            return bilete.get(id-1);
+        }
+
         public void add(Path path)
         {
             try
@@ -59,7 +64,7 @@ public class Client  {
                     String trupa  = cuv[7];
 
 
-                    Concert c = new Concert(duration_h,duration_m,price,locuri,tip,trupe,trupa);
+                    Concert c = new Concert(duration_h,duration_m,price,locuri,tip,trupe,trupa,Id_bilete.getInstance().id);
                     pret_concert+=price;
                     return c;
 
@@ -74,7 +79,7 @@ public class Client  {
                     String e2 = cuv[7];
 
 
-                    Sportiv s = new Sportiv(duration_h1,duration_m1,price1,locuri1,e1,e2,tip1);
+                    Sportiv s = new Sportiv(duration_h1,duration_m1,price1,locuri1,e1,e2,tip1,Id_bilete.getInstance().id);
                     pret_sportiuv+=price1;
                     return s;
 
@@ -86,7 +91,7 @@ public class Client  {
                     int locuri2 = Integer.parseInt(cuv[5]);
                     String nume = cuv[6];
 
-                    Teatru t = new Teatru(duration_h2,duration_m2,price2,locuri2,tip2,nume);
+                    Teatru t = new Teatru(duration_h2,duration_m2,price2,locuri2,tip2,nume,Id_bilete.getInstance().id);
                     pret_teatru+=price2;
                     return t;
 
@@ -99,7 +104,7 @@ public class Client  {
 
 
 
-                    Stand_up st = new Stand_up(duration_h3,duration_m3,price3,locuri3,name);
+                    Stand_up st = new Stand_up(duration_h3,duration_m3,price3,locuri3,name,Id_bilete.getInstance().id);
                     pret_stand_up+=price3;
                     return st;
 

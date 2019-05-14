@@ -36,16 +36,17 @@ public class Concert extends Eveniment {
     }
 
 
-    public Concert(int duration_h, int duration_m, double price,int locuri, Tip_Concert tip_concert, int trupe,String trupa) {
+    public Concert(int duration_h, int duration_m, double price,int locuri, Tip_Concert tip_concert, int trupe,String trupa,int id) {
         super(duration_h, duration_m, price,locuri);
         this.tip_concert = tip_concert;
         this.trupe = trupe;
         this.trupa = trupa;
+        this.setId(id);
     }
 
     public void print()
     {
-        System.out.println("Concert:\n"+"Spectacolul dureaza "+this.getDuration_h()+" ore si "+this.getDuration_m()+" de minute\n"+
+        System.out.println("Nr produs: "+this.getId()+"\n"+"Concert:\n"+"Spectacolul dureaza "+this.getDuration_h()+" ore si "+this.getDuration_m()+" de minute\n"+
                 "Pretul este de: "+this.getPrice()+"lei \n"+
                 "Sunt disponibile "+this.getLocuri()+" locuri\n"+
                 "Tipul concertului este "+this.tip_concert+"\n"+

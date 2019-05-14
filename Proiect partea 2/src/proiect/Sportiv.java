@@ -29,16 +29,17 @@ public class Sportiv extends Eveniment {
         this.tip_sportiv = tip_sportiv;
     }
 
-    public Sportiv(int duration_h, int duration_m, double price, int locuri, String echipa1, String echipa2, Tip_Sportiv tip_sportiv) {
+    public Sportiv(int duration_h, int duration_m, double price, int locuri, String echipa1, String echipa2, Tip_Sportiv tip_sportiv,int id) {
         super(duration_h, duration_m, price, locuri);
         this.echipa1 = echipa1;
         this.echipa2 = echipa2;
         this.tip_sportiv = tip_sportiv;
+        this.setId(id);
     }
 
     public void print()
     {
-        System.out.println("Eveniment sportiv:\n"+"Meciul dureaza "+this.getDuration_h()+" ore si "+this.getDuration_m()+" de minute\n"+
+        System.out.println("Nr produs: "+this.getId()+"\n"+"Eveniment sportiv:\n"+"Meciul dureaza "+this.getDuration_h()+" ore si "+this.getDuration_m()+" de minute\n"+
                 "Pretul este de: "+this.getPrice()+"lei \n"+
                 "Sunt disponibile "+this.getLocuri()+" locuri\n"+
                 "Meciul este de "+this.tip_sportiv+"\n"+

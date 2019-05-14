@@ -35,9 +35,17 @@ public class Main {
         Operatii o1 = new Operatii();
         o1.constructor();
         o1.print_bilete();
-        o1.preturi_categorii();
-        o1.pret_total();
         o1.sorteaza();
         o1.print_bilete();
+        o1.preturi_categorii();
+        o1.pret_total();
+        o1.plata_grup();
+        o1.tag_id();
+        o1.tag_id();
+        o1.tag_id();
+        o1.print_lista();
+        o1.pret_lista();
+        o1.plata();
+
     }
 }

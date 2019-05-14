@@ -1,4 +1,4 @@
-/*
+
 package proiect;
 
 public class Id_bilete {
@@ -18,4 +18,3 @@ public class Id_bilete {
     }
 }
 
-*/

@@ -11,14 +11,15 @@ public class Stand_up extends Eveniment {
         this.comedian = comedian;
     }
 
-    public Stand_up(int duration_h, int duration_m, double price,int locuri, String comedian) {
+    public Stand_up(int duration_h, int duration_m, double price,int locuri, String comedian,int id) {
         super(duration_h, duration_m, price,locuri);
         this.comedian = comedian;
+        this.setId(id);
     }
 
         public void print()
         {
-            System.out.println("Stand-up:\n"+"Spectacolul dureaza "+this.getDuration_h()+" ore si "+this.getDuration_m()+" de minute\n"+
+            System.out.println("Nr produs: "+this.getId()+"\n"+"Stand-up:\n"+"Spectacolul dureaza "+this.getDuration_h()+" ore si "+this.getDuration_m()+" de minute\n"+
                     "Pretul este de: "+this.getPrice()+"lei \n"+
                     "Sunt disponibile "+this.getLocuri()+" locuri\n"+
                     "Comedianul ce va sustine show-ul este: "+this.comedian+"\n\n");
